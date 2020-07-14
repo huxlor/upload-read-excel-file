@@ -1,0 +1,13 @@
+# Compressed files
+# --------------------------------------
+*.xlsx
+*.xsl
+
+# Build systems
+# --------------------------------------
+node_modules/
+.sass-cache
+build/
+dist/
+.idea/
+package-lock.json
