@@ -1,6 +1,15 @@
+require('core-js/modules/es.promise');
+require('core-js/modules/es.string.includes');
+require('core-js/modules/es.object.assign');
+require('core-js/modules/es.object.keys');
+require('core-js/modules/es.symbol');
+require('core-js/modules/es.symbol.async-iterator');
+require('regenerator-runtime/runtime');
+
+
 const express = require('express');
 const fileUpload = require('express-fileupload');
-// const ExcelJS = require('exceljs/dist/es5');
+const ExcelJS = require('exceljs/dist/es5');
 const app = express();
 
 // default options
@@ -41,14 +50,21 @@ app.post('/upload', function(req, res) {
         } else {
             res.json({status: true, message: 'File uploaded!'});
 
-            // let workbook = new Excel.Workbook(); 
-            // workbook.xlsx.readFile(sugoFile)
-            // .then(() => {
-            //     let worksheet = workbook.getWorksheet(sheet);
-            //     worksheet.eachRow({ includeEmpty: true }, function(row, rowNumber) {
-            //     console.log("Row " + rowNumber + " = " + JSON.stringify(row.values));
-            //     });
-            // });
+            let workbook = new ExcelJS.Workbook(); 
+            workbook.xlsx.readFile(`uploads/${sugoFile.name}`)
+            .then(() => {
+                let worksheet = workbook.getWorksheet('sugo_Alta_Colaboradores');
+
+                worksheet.eachRow({ includeEmpty: false }, (row, rowNumber) => {
+                    console.log("Email" + " =" + JSON.stringify(row.values[1]));
+                });
+
+                let company = worksheet.getCell('D8').value;
+                let RUC = worksheet.getCell('D9').value;
+
+                console.log("company " + " = " + JSON.stringify(company));
+                console.log("RUC " + " = " + JSON.stringify(RUC));
+            });
         }
           
     
