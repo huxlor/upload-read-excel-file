@@ -1,20 +1,25 @@
 {
-  "name": "sugo-sso-back-fileupload",
+  "name": "nodejs",
   "version": "1.0.0",
-  "description": "Service to upload a Excel file.",
-  "main": "index.js",
+  "description": "Nodejs Course Series ",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Islem Penywis",
+  "license": "MIT ",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "core-js": "^3.6.5",
     "exceljs": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "express-fileupload": "^1.1.7-alpha.3",
-    "nodemon": "^2.0.4",
+    "node": "^11.0.0",
+    "pug": "^2.0.3",
     "regenerator-runtime": "^0.13.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
   }
 }

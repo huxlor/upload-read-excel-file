@@ -1,0 +1,96 @@
+html
+  head
+    title search
+    link(rel="stylesheet" type="text/css" href="/files/SG-carga-colaboradores.min.css")
+  body
+    div 
+      img(src="/arquivos/LogoSugoWhite.png" class="logoLoginSugo")
+    div
+      span(class="lead")
+        |Por favor sigue las siguientes instrucciones para asegurar la carga exitosa de sus colaboradores en nuestro sistema.
+    input(
+        type="file"
+        name="excelFile"
+        class="inputUpload"
+        readonly=false
+        accept=".xlsx"
+        required
+    )
+
+//-  <body id="carga-colaboradores">
+//-     <div class="contentLogo">
+//-         <img src="/arquivos/LogoSugoWhite.png" class="logoLoginSugo"></img>
+//-     </div>
+//-      <div class='contentPreLoading'>
+//-         <img class='imgGif' src='/arquivos/imgGif.png'></img>
+//-         <img class='imgPreUpload' src='/arquivos/imgValidInfoLogin.png'></img>
+//-     </div>
+//-      <div class="contentChargeFile">
+//-          <span class="lead">
+//-             Por favor sigue las siguientes instrucciones para asegurar la carga exitosa de sus colaboradores en nuestro sistema.
+//-          </span>
+//-          <div class="contentSecuenceUpload">
+//-              <div class="contentImgSecuence">
+//-                  <img src="/arquivos/secuenceUpload1.png"></img>
+//-                  <img src="/arquivos/secuenceUpload2.png"></img>
+//-                  <img src="/arquivos/secuenceUpload3.png"></img>
+//-                  <img src="/arquivos/secuenceUpload4.png"></img>
+//-              </div>
+//-              <div class="contentTextSecuence">
+//-                  <span>Dale clic al botón de carga.</span>
+//-                  <span>Adjunta el archivo que enviamos, incluyendo todos los e-mails de sus colaboradores</span>
+//-                  <span>Asegúrate de que el archivo sea el correcto antes de finalizar el proceso de carga.</span>
+//-                  <span>Dale clic a enviar.¡Listo!</span>
+//-              </div>
+//-          </div>
+//-          <div class="contentNameFile">
+//-              <input
+//-                 type="text"
+//-                 class="nameFile"
+//-                 readonly="true"
+//-             ></input>
+//-             <span class="deleteFile"></span>
+//-          </div>
+         
+//-         <div class="contentButtons">
+//-             <div class="buttonUploadWrapper">
+//-                 <span class="label">Cargar</span>
+//-                 <input
+//-                     id="uploadExcel"
+//-                     class="inputUpload"
+//-                     type="file"
+//-                     name="excelFile"
+//-                     accept=".xlsx"
+//-                 ></input>
+//-             </div>
+//-             <button class="btnSend">Enviar</button>
+//-         </div>
+//-      </div>
+//-      <div class="contentPreUpload">
+//-         <img class="imgGif" src="/arquivos/imgGif.png"></img>
+//-         <img class="imgPreUpload" src="/arquivos/imgPreUpload.png"></img>
+//-     </div>
+//-      <div class="contentResponseFile">
+//-         <span class="responseText">¡La carga fue exitosa!</span>
+//-         <div class="quantityRegister"></div>
+//-         <span class="msjResponse">
+//-             ¡No te preocupes!<br></br> Puedes revisar los errores en nuestro reporte y corregirlos para volver a cargar los correos correctamente.
+//-         </span>
+//-          <div class="contentButtons">
+//-             <img class="imgBackChargeFile" src="/arquivos/imgBack.png"></img>
+//-             <button class="btnDownloadErrors">Descarga el reporte de errores</button>
+//-         </div>
+//-         <div class="contentImg">
+//-             <img class="imgUploadSuccess" src="/arquivos/imgUploadSuccess.png"></img>
+//-         </div>
+//-      </div>
+//-      <div class="contentResponseFileError">
+//-             <span class="responseText">¡La carga no fue exitosa!</span>
+//-             <div class="errorRegister"></div>
+//-             <button class="btnBackChargeFile">Volver a Cargar el archivo</button>
+//-      </div>
+     
+//-  </body>
+//-     <vtex:template id="commonScripts" />
+//-     <script type="text/javascript" src="/files/SG-carga-colaboradores.bundle.min.js"></script>
+//-  </html>    
